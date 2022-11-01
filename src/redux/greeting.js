@@ -1,10 +1,10 @@
-import axios from "axios";
+import axios from 'axios';
 
-const GET_DATA = "HELLO_RAILS_REACT/redux/GET_DATA";
+const GET_DATA = 'HELLO_RAILS_REACT/redux/GET_DATA';
 const initialState = [];
 
 export const fetchData = () => async (dispatch) => {
-  const res = await axios.get("http://localhost:3000/api/v1/greetings");
+  const res = await axios.get('http://localhost:3000/api/v1/greetings');
 
   return dispatch({ type: GET_DATA, payload: res.data.message });
 };
